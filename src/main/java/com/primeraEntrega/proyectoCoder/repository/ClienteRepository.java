@@ -10,5 +10,7 @@ import com.primeraEntrega.proyectoCoder.model.Cliente;
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
     
-    List<Cliente> findByNombre(String nombre);
+    List<Cliente> findByName(Cliente cliente);
+
+    boolean existsByName(String nombre);
 }

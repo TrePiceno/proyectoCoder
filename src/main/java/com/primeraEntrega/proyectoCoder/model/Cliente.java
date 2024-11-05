@@ -25,24 +25,21 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "NOMBRE")
-    private String nombre;
+    @Column(name = "name")
+    private String name;
 
-    @Column(name = "APELLIDO")
-    private String apellido;
+    @Column(name = "email")
+    private String email;
 
-    @Column(name = "CORREO")
-    private String correo;
-
-    @Column(name = "TELEFONO")
-    private String telefono;
+    @Column(name = "phone")
+    private String phone;
 
 
-    public Cliente(String nombre, String apellido, String correo, String telefono) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.correo = correo;
-        this.telefono = telefono;
+    public Cliente(Long id, String name, String email, String correo, String phone) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
     }
 
     @ManyToMany(fetch = FetchType.EAGER)
